@@ -7,6 +7,9 @@ A simple and aesthetic signup/login page built with HTML and CSS.
 I added my own basis though! Colors, styling, the sign-up page, the animations and transitions, etc!
 Kept the background though, 'cause it's sweet.
 
+## Demo
+- https://css-signup-login-page.vercel.app/
+
 ## Features
 - It is very little-ly animated. I spent a lot of time on that.
 
