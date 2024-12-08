@@ -8,27 +8,57 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="wrapper">
-        <form action="">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username">
+    <div class="modal">
+        <form action="" id="loginForm" class="form active">
+            <div class="header">Login</div>
+            <div class="inputDiv">
+                <input type="text" placeholder="Username/Email..." class="inputField">
                 <i class="bx bxs-user"></i>
             </div>
-            <div class="input-box">
-                <input type="password" placeholder="Password">
+            <div class="inputDiv">
+                <input type="password" placeholder="Password..." class="inputField">
                 <i class="bx bxs-lock-alt"></i>
             </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox">Remember Me</label>
-                <a href="#">Forgot password?</a>
+            <div class="rememberForgot">
+                <label><input type="checkbox" class="remember">Remember Me</label>
+                <a href="#" class="forgot">Forgot password?</a>
             </div>
             <button type="submit" class="btn">Login</button>
-            <div class="register-link">
-                <p>Don't have an account?</p>
-                <a href="#">Register</a>
+            <div class="signupLink">
+                <p>
+                    Don't have an account?
+                    <a href="#" id="showSignup">Sign Up</a>
+                </p>
+            </div>
+        </form>
+    
+        <form action="" id="signupForm" class="form">
+            <div class="header">Sign Up</div>
+            <div class="inputDiv">
+                <input type="text" placeholder="Username..." class="inputField">
+                <i class="bx bxs-user"></i>
+            </div>
+            <div class="inputDiv">
+                <input type="email" placeholder="Email..." class="inputField">
+                <i class="bx bxs-envelope"></i>
+            </div>
+            <div class="inputDiv">
+                <input type="password" placeholder="Password..." class="inputField">
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <div class="inputDiv">
+                <input type="password" placeholder="Confirm Password..." class="inputField">
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <div class="signupLink">
+                <p>
+                    Already have an account?
+                    <a href="#" id="showLogin">Login</a>
+                </p>
             </div>
         </form>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

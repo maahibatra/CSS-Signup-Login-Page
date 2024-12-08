@@ -17,45 +17,45 @@ body {
     background-position: center;
 }
 
-.wrapper {
-    width: 420px;
+.modal {
+    width: 18.25vw;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(20px);
     color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
+    border-radius: 0.5vw;
+    padding: 1.5vw 1.8vw;
 }
 
-.wrapper h1 {
-    font-size: 36px;
+.header {
+    font-size: clamp(30px, 4vw, 40px);
     text-align: center;
 }
 
-.wrapper .input-box {
+.inputDiv {
     position: relative;
     width: 100%;
-    height: 50px;
-    margin: 30px 0;
+    height: 4.4vh;
+    margin: 1vw 0;
 }
 
-.input-box input {
+.inputField {
     width: 100%;
     height: 100%;
     background-color: transparent;
     outline: none;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 40px;
-    font-size: 16px;
+    border-radius: 0.5vw;
+    font-size: clamp(15px, 0.7vw, 30px);
     color: #fff;
-    padding: 20px 45px 20px 20px;
+    padding: 0.6vw 1vw 0.6vw 0.6vw;
 }
 
-.input-box input::placeholder {
+.inputField::placeholder {
     color: #fff;
 }
 
-.input-box i {
+.inputDiv .bx {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -63,53 +63,95 @@ body {
     font-size: 20px;
 }
 
-.wrapper .remember-forgot {
+.rememberForgot {
     display: flex;
     justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
+    font-size: clamp(15px, 0.6vw, 30px);
+    margin: 1w 0.2vw;
 }
 
-.remember-forgot label input {
+.rememberForgot label input {
     accent-color: #fff;
-    margin-right: 3px;
+    margin-right: 0.1vw;
 }
 
-.remember-forgot a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.remember-forgot a:hover {
-    text-decoration: underline;
-}
-
-.wrapper .btn {
+.btn {
     width: 100%;
-    height: 45px;
+    height: 3.8vh;
     background-color: #fff;
     border: none;
     outline: none;
-    border-radius: 40px;
+    border-radius: 1vw;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    font-size: 16px;
+    font-size: clamp(18px, 0.8vw, 35px);
     color: #333;
     font-weight: 600;
+    margin-top: 1vw;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.wrapper .register-link {
-    font-size: 14.5px;
+.btn:hover {
+    background-color: black;
+}
+
+.signupLink {
+    font-size: clamp(15px, 0.6vw, 30px);
     text-align: center;
-    margin: 20px 0 15px;
+    margin: 1vw 0 0.6vw;
 }
 
-.register-link p a {
+a {
     color: #fff;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p a {
     font-weight: 600;
 }
 
-.register-link p a:hover {
-    text-decoration: underline;
+.modal {
+    position: relative;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#loginForm.active {
+    animation: fadeInFromLeft 0.3s ease-in-out;
+}
+
+#signupForm.active {
+    animation: fadeInFromRight 0.3s ease-in-out;
 }
