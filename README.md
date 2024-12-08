@@ -8,7 +8,7 @@ I added my own basis though! Colors, styling, the sign-up page, the animations a
 Kept the background though, 'cause it's sweet.
 
 ## Demo
-- https://css-signup-login-page.vercel.app/
+- [Click Here!!](https://css-signup-login-page.vercel.app/)
 
 ## Features
 - It is very little-ly animated. I spent a lot of time on that.
